@@ -1,0 +1,51 @@
+<!-- Creator Profile Template (deployed to GitHub Pages) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ creatorName }} - Unreality3D Creator</title>
+    <link rel="stylesheet" href="platform/platform-styles.css">
+    <link rel="stylesheet" href="custom/style.css">
+</head>
+<body>
+    <!-- PLATFORM-MANAGED SOCIAL CORE (Non-customizable) -->
+    <div id="platform-social-core">
+        <nav class="platform-nav">
+            <div class="creator-identity">
+                <img src="custom/assets/avatar.jpg" class="creator-avatar">
+                <h1>{{ creatorName }}</h1>
+                <div class="verification-badge" data-verified="{{ isVerified }}"></div>
+            </div>
+            <div class="social-stats">
+                <span class="friend-count">{{ friendCount }} Friends</span>
+                <span class="experience-count">{{ experienceCount }} Experiences</span>
+                <span class="community-score">{{ communityScore }} Community Score</span>
+            </div>
+        </nav>
+        
+        <div class="social-features">
+            <friend-list-component></friend-list-component>
+            <shared-experiences-component></shared-experiences-component>
+            <connection-requests-component></connection-requests-component>
+            <activity-feed-component></activity-feed-component>
+        </div>
+    </div>
+
+    <!-- CREATOR CUSTOMIZABLE AREA -->
+    <div id="creator-content" class="creator-customizable">
+        <!-- Creator's custom content rendered here -->
+        <div class="creator-bio">{{ customBio }}</div>
+        <div class="featured-projects">{{ featuredProjects }}</div>
+        <div class="custom-sections">{{ customSections }}</div>
+    </div>
+
+    <!-- PLATFORM COMMERCE INTEGRATION -->
+    <div id="commerce-integration">
+        <creator-store-component></creator-store-component>
+        <purchase-history-component></purchase-history-component>
+        <revenue-analytics-component></revenue-analytics-component>
+    </div>
+
+    <script src="platform/social-core.js"></script>
+    <script src="platform/commerce-integration.js"></script>
+</body>
+</html>
