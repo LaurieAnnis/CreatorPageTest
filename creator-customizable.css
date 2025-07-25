@@ -1,0 +1,31 @@
+/* Creator Custom CSS - Safe Sandbox */
+.creator-customizable {
+    /* Creators can customize these areas freely */
+}
+
+.creator-bio {
+    /* Custom styling for bio section */
+    background: var(--creator-primary-color, #1a1a1a);
+    color: var(--creator-text-color, #ffffff);
+}
+
+.featured-projects {
+    /* Custom project gallery styling */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Platform-provided CSS variables for consistency */
+:root {
+    --platform-accent: #6366f1;
+    --platform-background: #0f0f0f;
+    --platform-text: #ffffff;
+    --creator-primary-color: #custom; /* Creator sets this */
+    --creator-secondary-color: #custom;
+    --creator-text-color: #custom;
+}
+
+/* PROTECTED: Platform social features cannot be customized */
+#platform-social-core {
+    /* Locked from creator modification */
+}
